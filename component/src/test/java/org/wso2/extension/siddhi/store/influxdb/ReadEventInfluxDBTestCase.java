@@ -69,9 +69,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(description = "Read events from a InfluxDB table successfully.")
-    public void readEventInfluxTableTestCase1() throws InterruptedException, InfluxDBException {
+    public void readEventInfluxTableTest() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventsFromInfluxDBTableTestCase1");
+        log.info("readEventsFromInfluxDBTableTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string);\n" +
@@ -132,9 +132,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(expectedExceptions = SiddhiParserException.class, description = "Read unsuccessfully from non existing table")
-    public void readEventInfluxDBTestCase2() throws InterruptedException, InfluxDBException {
+    public void readFromNonExistingTableTest() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventInfluxDBTestCase2");
+        log.info("readFromNonExistingTableTest");
         SiddhiManager siddhiManager = new SiddhiManager();
 
         String streams = "" +
@@ -157,9 +157,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(expectedExceptions = SiddhiParserException.class, description = "Read unsuccessfully without defining stream")
-    public void readEventInfluxDBTestCase3() throws InterruptedException, InfluxDBException {
+    public void readEventWithoutDefineStreamTest() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventInfluxDBTestCase3");
+        log.info("readEventWithoutDefineStreamTest");
 
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
@@ -216,9 +216,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(description = "Read  multiple events from a InfluxDB table successfully with window.length.")
-    public void readEventInfluxTableTestCase4() throws InterruptedException, InfluxDBException {
+    public void readEventsInfluxTableTest() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventsFromInfluxDBTableTestCase4");
+        log.info("readEventsInfluxTableTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string);\n" +
@@ -277,9 +277,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(description = "Read  multiple events from a InfluxDB table successfully(window.time).")
-    public void readEventInfluxTableTestCase5() throws InterruptedException, InfluxDBException {
+    public void readEventsInfluxTableTestCase() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventsFromInfluxDBTableTestCase5");
+        log.info("readEventsFromInfluxDBTableTestCase");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string);\n" +
@@ -398,9 +398,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(description = "Testing reading  multiple events from a InfluxDB table successfully")
-    public void readEventInfluxTableTestCase7() throws InterruptedException, InfluxDBException {
+    public void readEventInfluxTableTestCase() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventsFromInfluxDBTableTestCase7");
+        log.info("readEventsFromInfluxDBTableTestCase");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string,vol long);\n" +
@@ -459,9 +459,9 @@ public class ReadEventInfluxDBTestCase {
     }
 
     @Test(description = "Read events from a InfluxDB table successfully without any condition")
-    public void readEventInfluxTableTestCase8() throws InterruptedException, InfluxDBException {
+    public void readEventsWithoutConditionTest() throws InterruptedException, InfluxDBException {
 
-        log.info("readEventsFromInfluxDBTableTestCase8");
+        log.info("readEventsWithoutConditionTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string);\n" +

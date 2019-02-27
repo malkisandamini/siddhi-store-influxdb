@@ -73,9 +73,9 @@ public class ContainsInInfluxDBTestCase {
     }
 
     @Test(description = "Test contains with one condition.")
-    public void containsEventInfluxDBTableTestCase1() throws InterruptedException, InfluxDBException {
+    public void containsCheckTestWithSingleCondition() throws InterruptedException, InfluxDBException {
 
-        log.info("containsEventInfluxDBTableTestCase1");
+        log.info("containsCheckTestWithSingleCondition");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string,value long);\n" +
@@ -131,9 +131,9 @@ public class ContainsInInfluxDBTestCase {
     }
 
     @Test(description = "Test contains with two conditions.")
-    public void containsEventInfluxDBTableTestCase2() throws InterruptedException, InfluxDBException {
+    public void containsCheckTestWithTwoConditions() throws InterruptedException, InfluxDBException {
 
-        log.info("containsEventInfluxDBTableTestCase2");
+        log.info("containsCheckTestWithTwoConditions");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string,value long);\n" +
@@ -189,9 +189,9 @@ public class ContainsInInfluxDBTestCase {
     }
 
     @Test(description = "Testing with already defined outputstream.")
-    public void containsEventInfluxDBTableTestCase3() throws InterruptedException, InfluxDBException {
+    public void containsCheckTestWithDefinedStream() throws InterruptedException, InfluxDBException {
 
-        log.info("containsEventInfluxDBTableTestCase3");
+        log.info("containsCheckTestWithDefinedStream");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream FooStream (name string,value long);\n" +

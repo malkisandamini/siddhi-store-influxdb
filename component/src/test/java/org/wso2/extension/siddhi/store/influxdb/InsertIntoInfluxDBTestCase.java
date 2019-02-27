@@ -62,9 +62,9 @@ public class InsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Testing insertion with single tag key")
-    public void insertIntoInfluxDBTableTest1() throws InterruptedException, InfluxDBException {
+    public void insertIntoTableWithSingleTagKeyTest() throws InterruptedException, InfluxDBException {
 
-        log.info("insertIntoInfluxDBTableTest1");
+        log.info("insertIntoTableWithSingleTagKeyTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -94,9 +94,9 @@ public class InsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Testing insertion with two tag keys")
-    public void insertIntoTableTest2() throws InterruptedException, InfluxDBException {
+    public void insertIntoTableWithTwoTagKeysTest() throws InterruptedException, InfluxDBException {
 
-        log.info("InsertIntoInfluxDBTableTest2");
+        log.info("insertIntoTableWithTwoTagKeysTest");
 
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
@@ -125,9 +125,9 @@ public class InsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Insert successfully with extracting current time")
-    public void insertIntoTableTest3() throws InterruptedException, InfluxDBException {
+    public void insertIntoTableTest() throws InterruptedException, InfluxDBException {
 
-        log.info("InsertIntoInfluxDBTableTest3");
+        log.info("InsertIntoInfluxDBTableTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long); " +
@@ -156,9 +156,9 @@ public class InsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "define Table without tag keys")
-    public void insertIntoInfluxDBTableTest4() throws InterruptedException, InfluxDBException {
+    public void insertIntoTableWithoutTagKeysTest() throws InterruptedException, InfluxDBException {
 
-        log.info("insertIntoInfluxDBTableTest4");
+        log.info("insertIntoTableWithoutTagKeysTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
 
@@ -187,9 +187,9 @@ public class InsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "incorrect format for time")
-    public void insertIntoInfluxDBTableTest6() throws InterruptedException, InfluxDBException {
+    public void insertIntoTableWithIncorretTimeFormatTest() throws InterruptedException, InfluxDBException {
 
-        log.info("insertIntoInfluxDBTableTest6");
+        log.info("insertIntoTableWithIncorretTimeFormatTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time string); " +

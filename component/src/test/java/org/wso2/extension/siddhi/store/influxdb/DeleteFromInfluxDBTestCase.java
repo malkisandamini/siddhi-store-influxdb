@@ -62,9 +62,9 @@ public class DeleteFromInfluxDBTestCase {
     }
 
     @Test(description = "Delete From InfluxDBTable successfully test1")
-    public void deleteFromInfluxDBTableTest1() throws InterruptedException, InfluxDBException {
+    public void deleteFromInfluxDBTableTestWithSingleCondition() throws InterruptedException, InfluxDBException {
 
-        log.info("deleteFromInfluxDBTableTest1");
+        log.info("deleteFromTableTestWithSingleCondition");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long ); " +
@@ -104,9 +104,9 @@ public class DeleteFromInfluxDBTestCase {
     }
 
     @Test(description = "Delete From InfluxDB Table successfully test2")
-    public void deleteFromInfluxDBTableTest2() throws InterruptedException, InfluxDBException {
+    public void deleteFromTableTestWithSingleCondition() throws InterruptedException, InfluxDBException {
 
-        log.info("deleteFromInfluxDBTableTest2");
+        log.info("deleteFromTableTestWithSingleCondition");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long ); " +
@@ -147,9 +147,9 @@ public class DeleteFromInfluxDBTestCase {
     }
 
     @Test(description = "Delete From influxDB table successfully test3")
-    public void deleteFromInfluxDBTableTest3() throws InterruptedException, InfluxDBException {
+    public void deleteFromInfluxDBTableTest() throws InterruptedException, InfluxDBException {
 
-        log.info("deleteFromInfluxDBTableTest3");
+        log.info("deleteFromInfluxDBTableTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string,symbol2 String, price float, volume long,time long ); " +
@@ -190,9 +190,9 @@ public class DeleteFromInfluxDBTestCase {
     }
 
     @Test(description = "Delete From influxDB table successfully test4")
-    public void deleteFromInfluxDBTableTest4() throws InterruptedException, InfluxDBException {
+    public void deleteFromITableWithTwoConditionsTest() throws InterruptedException, InfluxDBException {
 
-        log.info("deleteFromInfluxDBTableTest4");
+        log.info("deleteFromITableWithTwoConditionsTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string,symbol2 String, price float, volume long,time long ); " +

@@ -62,9 +62,9 @@ public class UpdateOrInsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Update or insert successfully with single condition")
-    public void updateOrInsertTableTest1() throws InterruptedException, InfluxDBException {
+    public void updateOrInsertWithSingleConditionTest() throws InterruptedException, InfluxDBException {
 
-        log.info("updateOrInsertTableTest1");
+        log.info("updateOrInsertWithSingleConditionTest");
 
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
@@ -103,9 +103,9 @@ public class UpdateOrInsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Upadate or insert successfully with single condition ")
-    public void updateOrInsertTableTest2() throws InterruptedException, InfluxDBException {
+    public void updateOrInsertWithSingleConditionTest2() throws InterruptedException, InfluxDBException {
 
-        log.info("updateOrInsertTableTest2");
+        log.info("updateOrInsertWithSingleConditionTest2");
 
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
@@ -140,9 +140,9 @@ public class UpdateOrInsertIntoInfluxDBTestCase {
     }
 
     @Test(description = "Update or insert successfully with two conditions")
-    public void updateOrInsertTableTest3() throws InterruptedException, InfluxDBException {
+    public void updateOrInsertWithTwoConditionsTest() throws InterruptedException, InfluxDBException {
 
-        log.info("updateOrInsertTableTest3");
+        log.info("updateOrInsertWithTwoConditionsTest");
 
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +

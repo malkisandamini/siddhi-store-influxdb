@@ -62,10 +62,10 @@ public class DefineInfluxDBTableTestCase {
         }
     }
 
-    @Test(testName = "influxDBTableDefinitionTest1", description = "Testing table creation. ")
-    public void influxDBTableDefinitionTest1() throws InterruptedException, InfluxDBException {
+    @Test(testName = "influxDBTableCreationTest", description = "Testing table creation. ")
+    public void influxDBTableCreationTest() throws InterruptedException, InfluxDBException {
 
-        log.info("InfluxDBTableDefinitionTest1");
+        log.info("InfluxDBTableCreationTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -93,9 +93,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(expectedExceptions = SiddhiAppCreationException.class, description = "testing without defining url value")
-    public void influxDBTableDefinitionTest2() {
+    public void influxDBTableDefinitionWithoutUrlTest() {
 
-        log.info("InfluxDBTableDefinitionTest2");
+        log.info("InfluxDBTableDefinitionWithoutUrlTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -117,9 +117,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(expectedExceptions = SiddhiAppCreationException.class, description = "testing without defining username")
-    public void influxDBTableDefinitionTest3() {
+    public void influxDBTableWithoutUsernameTest() {
 
-        log.info("InfluxDBTableDefinitionTest3");
+        log.info("InfluxDBTableDefinitionWithoutUsernameTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -140,9 +140,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(expectedExceptions = SiddhiAppCreationException.class, description = "testing without defining password")
-    public void influxDBTableDefinitionTest4() {
+    public void influxDBTableCreationWithoutPasswordTest() {
 
-        log.info("InfluxDBTableDefinitionTest4");
+        log.info("influxDBTableCreationWithoutPasswordTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -163,9 +163,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(expectedExceptions = SiddhiAppCreationException.class, description = "Testing without defining database name")
-    public void influxDBTableDefinitionTest5() {
+    public void influxDBTableCreationWithoutDatabaseTest() {
 
-        log.info("InfluxDBTableDefinitionTest5");
+        log.info("InfluxDBTableCreationWithoutDatabaseTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -187,9 +187,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(description = "testing with incorrect value for url")
-    public void influxDBTableDefinitionTest6() {
+    public void influxDBTablWithIncorrectUrlTest() {
 
-        log.info("InfluxDBTableDefinitionTest6");
+        log.info("InfluxDBTablWithIncorrectUrlTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -211,9 +211,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(description = "Testing with incorrect username")
-    public void influxDBTableDefinitionTest7() throws InterruptedException, InfluxDBException {
+    public void influxDBTableWithIncorrectUsernameTest() throws InterruptedException, InfluxDBException {
 
-        log.info("InfluxDBTableDefinitionTest7");
+        log.info("InfluxDBTableWithIncorrectUsernameTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -230,9 +230,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(description = "Testing with incorrect password")
-    public void influxDBTableDefinitionTest8() throws InfluxDBException {
+    public void influxDBTableDefinitionWithIncorrectPasswordTest() throws InfluxDBException {
 
-        log.info("InfluxDBTableDefinitionTest8");
+        log.info("influxDBTableDefinitionWithIncorrectPasswordTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
@@ -248,9 +248,9 @@ public class DefineInfluxDBTableTestCase {
     }
 
     @Test(description = "Testing with non existing database ")
-    public void influxDBTableDefinitionTest9() throws InfluxDBException {
+    public void tableDefinitionWithNonExistingDatabaseTest() throws InfluxDBException {
 
-        log.info("InfluxDBTableDefinitionTest9");
+        log.info("tableDefinitionWithNonExistingDatabaseTest");
         SiddhiManager siddhiManager = new SiddhiManager();
         String streams = "" +
                 "define stream StockStream (symbol string, price float, volume long,time long); " +
